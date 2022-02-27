@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Tutorials Ninja Test automation regression suite"
+	parallel="tests" thread-count="2">
+
+
+	<listeners>
+		<listener class-name="com.qa.tutoninja.testlisteners.ExtentReportListener" />
+		<listener class-name="com.qa.tutoninja.testlisteners.TestAllureListener" />
+		<listener class-name="com.qa.tutoninja.testlisteners.TesultsListener" />
+	</listeners>
+
+	<test name="Login Test">
+	<parameter name="browser" value="firefox" />
+		<parameter name="version" value="96" />
+		<classes>
+			<class name="com.qa.tutoninja.tests.LoginPageTest" />
+		</classes>
+	</test>
+	
+	<test name="Account Test">
+	<parameter name="browser" value="chrome" />
+	 <parameter name="version" value="97" />
+			<classes>
+			<class name="com.qa.tutoninja.tests.AccountsPageTest" />
+		</classes>
+	</test>
+
+
+
+</suite>
